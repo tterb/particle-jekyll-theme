@@ -68,19 +68,22 @@ body {
 	background: $bg-color;
 	background-repeat: no-repeat;
 	background-size: cover;
+	background-position: 50% 50%;
 	background-attachment: fixed;
   width: 100vw;
   min-height: 100vh;
 	vertical-align: bottom;
 	.particles-js-canvas-el {
-		width: 100% !important;
-		height: 100% !important;
-		bottom: 0 !important;
+		width: 100vw !important;
+		height: 100vh !important;
+		z-index: 0;
 	}
 }
 
 audio, canvas, video {
 	display: inline-block;
+	width: 100vw; 
+	height: 100vh;
 }
 
 .content-container {
@@ -94,6 +97,7 @@ audio, canvas, video {
 	// height: 75vh;
 	margin: -3vw auto;
 	// padding: 35px;
+	z-index: 100;
 	h1 {
 		color: rgba(#fff, 0.9);
 		font-size: 6.5vw;
@@ -124,7 +128,7 @@ audio, canvas, video {
 			display: none;
 		}
     li {
-      @include transition(background-color 550ms ease-in-out 0ms);
+      @include transition(background-color 500ms ease 50ms);
 			display: inline-block;
 			position: relative;
 			background-color: transparent;
@@ -152,13 +156,13 @@ audio, canvas, video {
 				}
 			}
 			a {
-				@include transition(color 550ms ease-in-out 0ms);
+				@include transition(color 500ms ease-in-out 50ms);
 				color: mix($bg-color, #fff, 25%);
 				text-decoration: none;
 				text-shadow: 0 1px 3px rgba(#000, 0.6);
-				&:hover {
-					color: rgba(#fff, 0.8);
-				}
+				// &:hover {
+				// 	color: rgba(#fff, 0.8);
+				// }
 			}
     }
 	}
@@ -188,9 +192,9 @@ audio, canvas, video {
 	position: relative;
 	background: $white;
 	color: darken($bg-color, 2%);
-	height: 80vh !important;
+	height: 90vh !important;
 	max-width: 1100px;
-	margin: 3vw auto;
+	margin: 0 auto;
 	padding-top: 4vw !important;
 	z-index: -1;
 }
@@ -234,6 +238,7 @@ audio, canvas, video {
       margin: 0 39.25%;
       > li {
         margin: 0;
+				padding: 1.5vw 0;
       }
     }
   }
@@ -337,7 +342,7 @@ button, .button {
   @include vendor('appearance', 'none');
   @include vendor('transition', ('background-color #{_duration(transitions)} ease-in-out', 'color #{_duration(transitions)} ease-in-out'));
 	@include linear-gradient(lighten($bg-color, 12%), darken($bg-color, 1%));
-  @include transition(all 300ms ease 0s, !important);
+  @include transition(all 300ms ease-in-out 0s, !important);
 	display: inline-block;
   color: rgba(#fff, 0.85);
   font-size: 1.5vw;
@@ -349,9 +354,10 @@ button, .button {
   text-transform: uppercase;
 	text-overflow: ellipsis;
 	height: 3.75vw;
+	border: 1px solid lighten($bg-color, 20%);
 	border-radius: 5px;
 	text-shadow: 0 1px 1.5px rgba(#000, 0.6);
-	box-shadow: 0 1px 8px rgba(#000, 0.4), 0 3px 0 0 lighten($bg-color, 8%), inset 0 0 0 -5px rgba(#000, 0.5), inset 0 2px 1px 0 rgba(#fff, 0.05) !important;
+	box-shadow: 0 1px 8px rgba(#000, 0.3), 0 3px 0 0 lighten($bg-color, 8%), inset 0 0 0 -5px rgba(#000, 0.5), inset 0 2px 1px 0 rgba(#fff, 0.1) !important;
   padding: 0 3.3vw;
 	outline: 0;
 	cursor: pointer;
@@ -359,11 +365,11 @@ button, .button {
   overflow: hidden;
   
 	&:hover, &:active {
-		@include linear-gradient(lighten($bg-color, 8%), darken($bg-color, 5%));
-		@include transition(all 300ms ease-in-out 0s);
+		@include linear-gradient(lighten($bg-color, 15%), $bg-color);
+		// @include transition(all 300ms ease-in-out 0s);
 		color: rgba(#fff, 0.95) !important;
 		text-shadow: 0 1px 1.5px rgba(#000, 0.85);
-		box-shadow: 0 3px 0 0 darken($bg-color, 15%), 0 1px 14px rgba(#000, 0.4), 0 3px 0 0 #a13638, inset 0 0 0 -5px rgba(#000, 0.5), inset 0 2px 1px 0 rgba(#fff, 0.025) !important;
+		box-shadow: 0 1px 14px rgba(#000, 0.3), 0 3px 0 0 lighten($bg-color, 8%), inset 0 0 0 -5px rgba(#000, 0.5), inset 0 2px 1px 0 rgba(#fff, 0.15) !important;
 	}
 	
 	&.outline {
@@ -432,7 +438,7 @@ button, .button {
 	bottom: 0;
 	box-shadow: 0 -2px 4px rgba(#000, 0.3);
 	// box-shadow: none;
-	padding: 3em 3em 0.55em !important;
+	padding: 3.5em 3em 0.55em !important;
 	span {
 		color: rgba(#fff, 0.7);
 		font-size: 2.35vw;
@@ -449,14 +455,14 @@ button, .button {
 		}
 	}
 	.copyright {
-    color: mix($bg-color, #fff, 45%);
+    color: rgba(#fff, 0.55);
     font-family: _font(hdr-family);
     font-size: 1.15vw;
 		font-weight: 300;
     letter-spacing: 0.1em;
     text-transform: none;
     list-style: none;
-    margin-bottom: 0.5em;
+    margin-bottom: 0.65em;
     padding: 0;
     cursor: default;
     li {
@@ -478,7 +484,7 @@ button, .button {
         }
       }
       .jekyll-link:hover {
-        color: #d74246 !important;
+        color: #ed6262 !important;
       }
         
       // @include breakpoint(xsmall) {
