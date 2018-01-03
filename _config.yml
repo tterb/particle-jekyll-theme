@@ -1,0 +1,91 @@
+# Welcome to Jekyll!
+
+# Site settings
+title: Brett Stevenson
+desc: Code Monkey
+owner:
+  name: Brett Stevenson # or company name
+  email: BStevensonDev@gmail.com
+  url: https://JonSn0w.github.io
+first_published: 2015 # if migrating another site, the year of your first publish
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site
+
+social:
+  github: https://github.com/JonSn0w
+  dribbble: https://dribbble.com/JonSn0w
+  linkedin: https://www.linkedin.com/in/brett-stevenson-0a035a72
+  twitter: https://twitter.com/BStevensonDev
+  email: /contact/
+  #amazon:
+  #angellist:
+  #bitbucket:
+  #connectdevelop:
+  #delicious:
+  #deviantart:
+  #digg:
+  #flickr:
+  #forumbee:
+  #foursquare:
+  #ils:
+  #instagram:
+  #leanpub:
+  #linux:
+  #pied-piper:
+  #reddit:
+  #skyatlas:
+  #slack:
+  #soundcloud:
+  #spotify:
+  #stack-overflow:
+  #stackexchange:
+  #stubleupon:
+  #trello:
+  #tripadvisor:
+  #tumblr:
+  #vimeo:
+  #vine:
+  #vk:
+  #weibo:
+  #weixin:
+  #yelp:
+  #youtube:
+
+# If you have custom extensions, specifically includes/_my/custom.scss,
+# set this to yes
+custom_extensions: no
+
+# Contact page action
+# Set this according toyour chosen method of mail forwarding
+mailaction: https://formspree.io/your@email.com
+
+# Build settings
+permalink: /:categories/:title.html
+
+# permalink: /:title.html
+markdown: kramdown
+highlighter: rouge
+sass:
+ style: compressed
+exclude: ['README.md','Gulpfile.js','.sass-lint.yml','package.json','node_modules', 'jspm_packages','fonts/*.html']
+include: ['_pages','.htaccess']
+defaults:
+  - scope:
+      path: _pages
+    values:
+      layout: page
+
+# https://github.com/episource/jekyll-html-proofer
+html_proofer:
+  check_favicon: true
+  check_html: true
+  allow_hash_href: true
+  http_status_ignore: [999,522,403]
+  file_ignore:
+    - bower_components/*
+    - bower_components/**/*.html
+    - fonts/*
+
+# to initialize arrays in assignments (assign myarr = site.empty_array)
+# (easier to grok than assign myarr = '' | split',')
+empty_array: []

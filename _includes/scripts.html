@@ -1,0 +1,49 @@
+<!-- Scripts -->
+<script src="{{ '/js/jquery.min.js' | prepend: site.baseurl }}"></script>
+<script src="{{ '/js/jquery.scrollex.min.js' | prepend: site.baseurl }}"></script>
+<script src="{{ '/js/jquery.scrolly.min.js' | prepend: site.baseurl }}"></script>
+<script src="{{ '/js/skel.min.js' | prepend: site.baseurl }}"></script>
+<script src="{{ '/js/util.min.js' | prepend: site.baseurl }}"></script>
+<script src="{{ '/js/main.min.js' | prepend: site.baseurl }}"></script>
+<script src="{{ '/js/particles.min.js' | prepend: site.baseurl }}"></script>
+<script src="{{ '/js/particle-config.min.js' | prepend: site.baseurl }}"></script>
+
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/0.7.3/webcomponents.min.js"></script>
+<link rel="import" href="/bower_components/awesome-button/awesome-button.html"/> -->
+
+<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+<script>
+  (function ($) {
+    "use strict";
+    window.sr = ScrollReveal({ duration: 1000, reset: true });
+    sr.reveal('.contact-landing', 10);
+    sr.reveal('.button');
+    // sr.reveal('#two .inner', 10);
+    // sr.reveal('#back-to-top', 25);
+    // sr.reveal('.preview-section .feature-list li', 25);
+    // sr.reveal('.repo-icons a', 20);
+    // sr.reveal('.tag-line');
+  }(jQuery));
+</script>
+
+
+<noscript>
+  <link rel="stylesheet" href="{{ '/fonts/FontAwesome/fontawesome.min.css' | prepend: site.baseurl }}">
+</noscript>
+
+{% for include in page.script-includes %}
+  {% assign test1 = include | slice: 0,2 %}
+  {% if test1 == "//" %}
+    <script src="{{ include }}"></script>
+  {% else %}
+    <script src="{{ include | prepend: site.baseurl }}"></script>
+  {% endif %}
+{% endfor %}
+{% if page.script %}
+  <script>
+  {{ page.script }}
+  </script>
+{% endif %}
+{% if jekyll.environment == "production" %}
+  <script src='/js/analytics.min.js'></script>
+{% endif %}

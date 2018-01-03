@@ -1,0 +1,24 @@
+<!-- Footer -->
+<footer id="footer">
+  <span><i class="fa fa-code"></i> with <i class="fa fa-heart"></i></span>
+  <ul class="copyright">
+    <li>&copy;
+      {% assign thisyear = site.time | date: "%Y" %}
+      {% if site.first_published %}
+        {% capture diff %}
+          {{ site.first_published | minus:thisyear }}
+        {% endcapture %}
+        {% if diff contains '-' %}
+          {{ site.first_published }},
+        {% endif %}
+      {% endif %}
+      {{ thisyear }}
+      {% if site.owner.name %}
+        {{ site.owner.name }}
+      {% else %}
+        {{ site.title }}
+      {% endif %}
+    </li>
+    <li>Powered by <a href="http://jekyllrb.com" class="jekyll-link" role="link" target="_blank">Jekyll</a></li>
+  </ul>
+</footer>
