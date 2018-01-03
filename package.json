@@ -1,7 +1,7 @@
 {
-  "name": "jonsn0w.github.io",
+  "name": "particle-jekyll-theme",
   "version": "1.0.0",
-  "description": "A personal website for my projects, designs and blog",
+  "description": "A minimal Jekyll theme for developers",
   "main": "Gulpfile.js",
   "dependencies": {
     "chart.js": "^2.4.0",
@@ -33,14 +33,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/JonSn0w/JonSn0w.github.io.git"
+    "url": "git+https://github.com/JonSn0w/particle-jekyll-theme.git"
   },
   "author": "Brett Stevenson",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/JonSn0w/JonSn0w.github.io/issues"
+    "url": "https://github.com/JonSn0w/particle-jekyll-theme/issues"
   },
-  "homepage": "https://github.com/JonSn0w/JonSn0w.github.io#readme",
+  "homepage": "https://github.com/JonSn0w/particle-jekyll-theme#readme",
   "jspm": {
     "dependencies": {
       "jquery": "npm:jquery@^3.2.1"
