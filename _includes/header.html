@@ -1,0 +1,17 @@
+
+<header id="header" class="header">
+  <div class="wrapper-head">
+    <!-- <div class="logo" style="background-image: url({{ site.favicon | prepend: site.baseurl }})"></div> -->
+    <nav class="site-nav">
+      <div class="trigger">
+        <a class="page-link" href="{{ site.baseurl }}">Home</a>
+        {% assign sorted_pages = site.pages | sort: 'key' %}
+        {% for page in sorted_pages %}
+          {% if page.title %}{% unless page.options contains 'nomenu' %}
+            <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+          {% endunless %}{% endif %}
+        {% endfor %}
+      </div>
+    </nav>
+  </div>
+</header>
