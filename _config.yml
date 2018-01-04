@@ -6,13 +6,13 @@ desc: Code Monkey
 owner:
   name: Your Name # or company name
   email: your@email.com
-  url: https://yourwebsite.com
+  url: https://brettstevenson.io
 first_published: 2015 # if migrating another site, the year of your first publish
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/particle-theme" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site
 
 social:
-  github: https://github.com/
+  github: https://github.com/JonSn0w/particle-jekyll-theme
   twitter: https://twitter.com/
   linkedin: https://www.linkedin.com/
   dribbble: https://dribbble.com/
@@ -61,7 +61,7 @@ custom_extensions: no
 
 # Contact page action
 # Set this according toyour chosen method of mail forwarding
-mailaction: https://formspree.io/your@email.com
+mailaction: https://formspree.io/bstevensondev@gmail.com
 
 # Build settings
 permalink: /:categories/:title.html
