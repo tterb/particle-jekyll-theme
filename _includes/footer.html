@@ -1,6 +1,25 @@
 <!-- Footer -->
 <footer id="footer">
-  <span><i class="fa fa-code"></i> with <i class="fa fa-heart"></i></span>
+  {% if page.layout == 'landing' %}
+    <span><i class="fa fa-code"></i> with <i class="fa fa-heart"></i></span>
+  {% else %}
+    <ul class="icons">
+      {% for socloc in site.social %}
+        {% if socloc[1] %}
+          {% if socloc[0] == 'email' %}
+            {% if page.options contains 'single-page' %}
+            <li><a target="_blank" href="{{ '#contact' | prepend: site.url }}" class="more scrolly fa fa-envelope" style="position:relative;top:-2px;left:0.5px;"><span class="label">E-mail</span></a></li>
+            {% else %}
+            <li><a target="_blank" href="{{ socloc[1] }}" class="fa fa-envelope" style="position:relative;top:-2px;left:0.5px;"><span class="label">E-mail</span></a></li>
+            {% endif %}
+          {% else %}
+            <li><a target="_blank" href="{{ socloc[1] }}" class="fa fa-{{ socloc[0] }}">
+            <span class="label">{{ socloc[0] }}</span></a></li>
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+    </ul>
+  {% endif %}
   <ul class="copyright">
     <li>&copy;
       {% assign thisyear = site.time | date: "%Y" %}
@@ -20,5 +39,6 @@
       {% endif %}
     </li>
     <li>Powered by <a href="http://jekyllrb.com" class="jekyll-link" role="link" target="_blank">Jekyll</a></li>
+    <li><a href="{{ '/credits' | prepend: site.baseurl }}">Credits</a></li>
   </ul>
 </footer>
