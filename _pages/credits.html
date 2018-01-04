@@ -1,0 +1,18 @@
+---
+key: 3
+title: Credits
+layout: page
+options: fullwidth, nomenu
+permalink: /credits/
+sitemap:
+  priority: 0.5
+---
+
+<div class="credit-content">
+  <h4 class="credit-category">Design and Framework</h4>
+  <ul class="credit-list">
+    {% for source in site.data.credits %}
+      <li class="list-item"><a href="{{ source.link }}" target="_blank">{{ source.title }}:</a> {{ source.author }} {% if source.license %}<img class="credit-license svg" alt="{{ source.license }}" src="{{ '/css/images/license.svg' | prepend: site.url }}" aria-hidden="true"></span>{% endif %}</li>
+    {% endfor %}
+  </ul>
+</div>

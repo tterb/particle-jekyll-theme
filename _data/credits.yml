@@ -1,0 +1,39 @@
+- title: Theme Design & Development
+  author: Brett Stevenson
+  link: http://brettstevenson.io
+  license: MIT
+  
+- title: Particle.js
+  author: Vincent Garreau
+  link: http://vincentgarreau.com/particles.js/
+  license: MIT
+  
+- title: Font Awesome
+  author: Dave Gandy
+  link: http://fontawesome.io
+  license: MIT
+  
+- title: ScrollMagic
+  author: Vincent Garreau
+  link: http://scrollmagic.io/
+  license: MIT
+  
+- title: Bourbon
+  author: Dave Gandy
+  link: http://bourbon.io
+  license: MIT
+  
+- title: Skel - Responsive Framework
+  author: ajlkn
+  link: http://skel.io/
+  license: MIT
+
+- title: Build Framework
+  author: Jekyll
+  link: http://jekyllrb.com
+  license: MIT
+  
+- title: JQuery
+  author: JQuery Foundation
+  link: https://jquery.com
+  license: MIT
