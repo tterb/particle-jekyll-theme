@@ -1,21 +1,21 @@
 # Welcome to Jekyll!
 
 # Site settings
-title: Brett Stevenson
+title: Johnny Syntax
 desc: Code Monkey
 owner:
-  name: Brett Stevenson # or company name
-  email: BStevensonDev@gmail.com
-  url: https://JonSn0w.github.io
+  name: Your Name # or company name
+  email: your@email.com
+  url: https://yourwebsite.com
 first_published: 2015 # if migrating another site, the year of your first publish
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site
 
 social:
-  github: https://github.com/JonSn0w
-  dribbble: https://dribbble.com/JonSn0w
-  linkedin: https://www.linkedin.com/in/brett-stevenson-0a035a72
-  twitter: https://twitter.com/BStevensonDev
+  github: https://github.com/
+  twitter: https://twitter.com/
+  linkedin: https://www.linkedin.com/
+  dribbble: https://dribbble.com/
   email: /contact/
   #amazon:
   #angellist:
@@ -50,6 +50,10 @@ social:
   #weixin:
   #yelp:
   #youtube:
+  
+# If you want to use Google analytics to monitor your site traffic,
+# register your site google.com/analytics/standard
+google-analytics: <google-analytics tracking ID>
 
 # If you have custom extensions, specifically includes/_my/custom.scss,
 # set this to yes
@@ -75,6 +79,8 @@ defaults:
     values:
       layout: page
 
+
+# Plugin checks for issues in generated html
 # https://github.com/episource/jekyll-html-proofer
 html_proofer:
   check_favicon: true
@@ -82,8 +88,6 @@ html_proofer:
   allow_hash_href: true
   http_status_ignore: [999,522,403]
   file_ignore:
-    - bower_components/*
-    - bower_components/**/*.html
     - fonts/*
 
 # to initialize arrays in assignments (assign myarr = site.empty_array)
