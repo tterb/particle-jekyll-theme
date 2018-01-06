@@ -3,7 +3,7 @@
   {% include head.html %}
   <body>
     <div class="page-wrapper">
-      {% unless page.options contain "noheader" %}
+      {% unless page.options contains "noheader" %}
         {% include header.html %}
         <div class="page-header">
           <h1 class="page-title">{{ page.title }}</h1>
@@ -12,7 +12,7 @@
       <section class="page-content">
         {{ content }}
       </section>
-      {% unless page.options contain "nofooter" %}
+      {% unless page.options contains "nofooter" %}
         {% include footer.html %}
       {% endunless %}
       {% include scripts.html %}
