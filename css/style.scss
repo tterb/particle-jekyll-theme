@@ -188,7 +188,7 @@ audio, canvas, video {
 	position: relative;
 	background: $white;
 	color: darken($bg-color, 2%);
-	// height: 85vh !important;
+	height: 108vh !important;
 	max-width: 1100px;
 	margin: 0 auto;
 	padding-top: 3vw !important;
@@ -289,7 +289,7 @@ textarea {
 	box-shadow: inset 0 0 3px rgba(#000, 0.3) !important;
 	outline: 0;
 	margin: 0 auto 2em;
-	padding: 0 1em;
+	padding: 0.5em 0.8em 0.6em;
   
   &:invalid {
     box-shadow: none;
@@ -324,7 +324,8 @@ select {
 
 textarea {
 	line-height: 1.4;
-	padding: 0.75em 1em;
+	margin: 0 auto !important;
+	padding: 0.65em 0.8em;
 	resize: vertical;
 	overflow-y: auto;
 }
@@ -391,10 +392,7 @@ button, .button {
 	display: block;
 	position:relative;
 	min-height: 100%;
-	// &.landing-wrapper {
-	// 	width: 100%; 
-	// 	padding: 0;
-	// }
+	z-index: 0;
 	.page-header {
 		width: 95%;
 		margin: auto;
@@ -404,7 +402,7 @@ button, .button {
 			font-size: 8.5vw;
 			letter-spacing: 0.025em;
 			line-height: 1;
-			margin: 2vw 0;
+			margin: 3vw 0 2vw;
 		}
 	}
 	.page-content {
@@ -430,7 +428,7 @@ button, .button {
   z-index: 999;
 	.trigger {
 		float: right;
-		padding-right: 1.25vw;
+		padding-right: 1.4vw;
 	}
   .page-link {
 		@include transition(all 350ms ease-in-out 0s);
@@ -495,6 +493,80 @@ button, .button {
 	}
 }
 
+#four-oh-four {
+  img {
+    @include filter(grayscale(55%));
+    position: absolute;
+    background-image: url("http://cdn.themehelite.com/themeforest/404doz/img/background-image.jpg"); 
+    background-color: rgb(51, 51, 51); 
+    background-position: center center; 
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    z-index: -999;
+  }
+  #error-container {
+    .overlay {
+      position: absolute;
+      background-color: #000;
+      width: 100%;
+      height: 100%;
+      opacity: 0.7;
+    }
+  }
+  .message {
+    position: relative;
+    font-face: 'Dosis', sans-serif !important;
+    width: 78%;
+    margin: auto;
+    padding: 14vh 0 0;
+    z-index: 999;
+    h2 {
+      font-family: 'Dosis', sans-serif !important;
+      font-size: 550%;
+      font-weight: 300;
+      letter-spacing: 0.045em;
+      line-height: 1.15;
+      margin-bottom: 0.1em;
+    }
+    p {
+      color: rgba(#fff, 0.8);
+      font-size: 120%;
+      letter-spacing: 0.025em;
+      margin-bottom: 1.25em;
+    }
+    ul {
+      color: rgba(#fff, 0.7);
+      list-style: none;
+      margin-bottom: 0;
+      margin-left: 5px;
+      padding-left: 0;
+      li {
+        @include transition(all 250ms ease-in-out 0ms);
+        display: inline-block;
+        position: relative;
+        font-family: _font(ctrl-family);
+        font-size: 110%;
+        padding: 0 0.5em;
+        &:first-child {
+          padding-left: 0;
+        }
+        &:hover, &:active {
+          color: rgba(#fff, 0.95);
+          font-weight: 500;
+          text-shadow: 0 0.5px 1px rgba(#000, 0.8); 
+        }
+      }
+      span {
+        position: relative;
+        font-size: 40%;
+        top: -3px;
+        padding: 0;
+      }
+    }
+  }
+}
+
 /********************** 
  ******* Footer *******
  **********************/
@@ -513,7 +585,7 @@ button, .button {
 		color: rgba(#fff, 0.7);
 		font-size: 2.35vw;
 		letter-spacing: 0.03em;
-		line-height: 1.5;
+		line-height: 2;
 		margin: 1em auto 1.5em;
 		vertical-align: middle;
 		.fa {
@@ -541,7 +613,8 @@ button, .button {
     letter-spacing: 0.1em;
     text-transform: none;
     list-style: none;
-    margin-bottom: 0.75vw;
+		margin-top: 1.5vw;
+    margin-bottom: 0.5vw;
     padding: 0;
     cursor: default;
     li {
@@ -559,7 +632,7 @@ button, .button {
         color: inherit;
 				text-decoration: none;
         &:hover {
-          color: rgba(#fff, 0.9);
+          color: #fff;
         }
       }
       .jekyll-link:hover {
