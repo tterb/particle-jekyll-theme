@@ -18,7 +18,7 @@ priority: 1.0
         {% if socloc[1] %}
           {% if socloc[0] == 'email' %}
             {% if page.options contains 'single-page' %}
-            <li><a target="_blank" href="#contact" class="more scrolly fa fa-envelope" style="position:relative;top:0.5px;left:0px;"><span class="label">E-mail</span></a></li>
+            <li><a target="_blank" href="#contact" class="more scrolly fa fa-envelope"><span class="label">E-mail</span></a></li>
             {% else %}
             <li><a target="_blank" href="{{ socloc[1] }}" class="fa fa-envelope" style="position:relative;top:0.5px;left:0px;"><span class="label">E-mail</span></a></li>
             {% endif %}
