@@ -8,19 +8,29 @@
   link: http://vincentgarreau.com/particles.js/
   license: MIT
   
-- title: Font Awesome
+- title: FontAwesome
   author: Dave Gandy
   link: http://fontawesome.io
   license: MIT
   
 - title: ScrollMagic
-  author: Vincent Garreau
+  author: janpaepke
   link: http://scrollmagic.io/
+  license: MIT
+  
+- title: SASS
+  author: Hampton Catlin
+  link: http://sass-lang.com/
   license: MIT
   
 - title: Bourbon
   author: Dave Gandy
   link: http://bourbon.io
+  license: MIT
+  
+- title: Gulp
+  author: Fractal Innovations
+  link: https://gulpjs.com/
   license: MIT
   
 - title: Skel - Responsive Framework
