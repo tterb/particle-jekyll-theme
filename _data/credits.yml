@@ -2,48 +2,58 @@
   author: Brett Stevenson
   link: http://brettstevenson.io
   license: MIT
+  license_url: https://opensource.org/licenses/MIT
   
 - title: Particle.js
   author: Vincent Garreau
   link: http://vincentgarreau.com/particles.js/
   license: MIT
+  license_url: https://opensource.org/licenses/MIT
   
 - title: FontAwesome
   author: Dave Gandy
   link: http://fontawesome.io
   license: MIT
+  license_url: https://opensource.org/licenses/MIT
   
 - title: ScrollMagic
   author: janpaepke
   link: http://scrollmagic.io/
   license: MIT
+  license_url: https://opensource.org/licenses/MIT
   
 - title: SASS
   author: Hampton Catlin
   link: http://sass-lang.com/
   license: MIT
+  license_url: https://opensource.org/licenses/MIT
   
 - title: Bourbon
   author: Dave Gandy
   link: http://bourbon.io
   license: MIT
+  license_url: https://opensource.org/licenses/MIT
   
 - title: Gulp
   author: Fractal Innovations
   link: https://gulpjs.com/
   license: MIT
+  license_url: https://opensource.org/licenses/MIT
   
 - title: Skel - Responsive Framework
   author: ajlkn
   link: http://skel.io/
   license: MIT
+  license_url: https://opensource.org/licenses/MIT
 
 - title: Build Framework
   author: Jekyll
   link: http://jekyllrb.com
   license: MIT
+  license_url: https://opensource.org/licenses/MIT
   
 - title: JQuery
   author: JQuery Foundation
   link: https://jquery.com
   license: MIT
+  license_url: https://opensource.org/licenses/MIT
