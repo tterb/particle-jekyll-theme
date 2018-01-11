@@ -2,7 +2,7 @@
 key: 3
 title: Credits
 layout: page
-options: fullwidth, nomenu
+options: nomenu
 permalink: /credits/
 sitemap:
   priority: 0.5
@@ -12,7 +12,7 @@ sitemap:
   <h4 class="credit-category">Design and Framework</h4>
   <ul class="credit-list">
     {% for source in site.data.credits %}
-      <li class="list-item"><a href="{{ source.link }}" target="_blank">{{ source.title }}:</a> {{ source.author }} {% if source.license %}<img class="credit-license svg" alt="{{ source.license }}" src="{{ '/css/images/license.svg' | prepend: site.url }}" aria-hidden="true"></span>{% endif %}</li>
+      <li class="list-item"><a href="{{ source.link }}" target="_blank">{{ source.title }}:</a> {{ source.author }} {% if source.license %}<a href="{{ source.license_url }}" target="_blank"><img class="credit-license svg" alt="{{ source.license }}" src="{{ '/css/images/license.svg' | prepend: site.baseurl }}" aria-hidden="true"></a></span>{% endif %}</li>
     {% endfor %}
   </ul>
 </div>
