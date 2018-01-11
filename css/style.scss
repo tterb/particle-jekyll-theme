@@ -478,15 +478,17 @@ button, .button {
 				}
 			}
 			.credit-license {
+				@include transition(all 350ms ease-in-out 0ms);
 				@include opacity(0.85);
 				display: inline-block;
 				position: relative;
-				width: 1.6vw; 
+				width: 1.7vw; 
 				height: auto;
 				vertical-align: middle;
 				padding-left: 4px;
 				&:hover path {
-					fill: yellow;
+					fill: rgba(#EEC750, 0.5);
+					stroke: black;
 				}
 			}
 		}
